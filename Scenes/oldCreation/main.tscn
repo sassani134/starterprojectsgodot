@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dvm8hit4j1nx0"]
 
-[ext_resource type="Script" uid="uid://bggecadrndooq" path="res://Scripts/main.gd" id="1_bo1nx"]
-[ext_resource type="Texture2D" uid="uid://bjy8bt6muscyl" path="res://icon.svg" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://bggecadrndooq" path="res://Scripts/oldCreation/main.gd" id="1_hllcl"]
+[ext_resource type="Texture2D" uid="uid://bjy8bt6muscyl" path="res://icon.svg" id="2_jlcys"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_bo1nx")
+script = ExtResource("1_hllcl")
 metadata/_edit_lock_ = true
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
@@ -33,7 +33,7 @@ theme_override_constants/separation = 5
 
 [node name="Pics" type="TextureRect" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_jjgbg")
+texture = ExtResource("2_jlcys")
 
 [node name="TitleGame" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2

@@ -1,0 +1,434 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvrkoybs0e3c0"]
+
+[ext_resource type="AudioStream" uid="uid://dlbsidv6mulcg" path="res://Assets/Sound/sb_racethesun.mp3" id="1_jn5mi"]
+[ext_resource type="AudioStream" uid="uid://cbw7f6tirdnqv" path="res://Assets/Sound/1.ogg" id="2_2dqow"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu" type="VBoxContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Menu"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="ButtonStart" type="Button" parent="Menu/Control"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 15.505)
+text = "Start"
+
+[node name="Control2" type="Control" parent="Menu"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="ButtonSettings" type="Button" parent="Menu/Control2"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 15.505)
+text = "Settings"
+
+[node name="Control3" type="Control" parent="Menu"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="ButtonQuit" type="Button" parent="Menu/Control3"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 15.505)
+text = "Quit"
+
+[node name="Settings" type="VBoxContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(100, 130)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Settings"]
+layout_mode = 2
+size_flags_vertical = 7
+
+[node name="ButtonVideo" type="Button" parent="Settings/Control"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Video"
+
+[node name="Control2" type="Control" parent="Settings"]
+layout_mode = 2
+size_flags_vertical = 7
+
+[node name="ButtonAudio" type="Button" parent="Settings/Control2"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Audio"
+
+[node name="Control3" type="Control" parent="Settings"]
+layout_mode = 2
+size_flags_vertical = 7
+
+[node name="ButtonControls" type="Button" parent="Settings/Control3"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Controls"
+
+[node name="Control4" type="Control" parent="Settings"]
+layout_mode = 2
+size_flags_vertical = 7
+
+[node name="ButtonLanguage" type="Button" parent="Settings/Control4"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Language"
+
+[node name="Video" type="VBoxContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(165, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Video"]
+layout_mode = 2
+text = "Video"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Video"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 50
+
+[node name="LabelResolution" type="Label" parent="Video/HBoxContainer"]
+layout_mode = 2
+text = "Resolution"
+
+[node name="OptionButtonResolution" type="OptionButton" parent="Video/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Video"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 50
+
+[node name="LabelFullscreen" type="Label" parent="Video/HBoxContainer2"]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="CheckBoxFullscreen" type="CheckBox" parent="Video/HBoxContainer2"]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Video"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 50
+
+[node name="LabelBordeless" type="Label" parent="Video/HBoxContainer3"]
+layout_mode = 2
+text = "Bordeless"
+
+[node name="CheckBoxBordeless" type="CheckBox" parent="Video/HBoxContainer3"]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Video"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 50
+
+[node name="LabelVSync" type="Label" parent="Video/HBoxContainer4"]
+layout_mode = 2
+text = "Vsync"
+
+[node name="CheckBoxVSync" type="CheckBox" parent="Video/HBoxContainer4"]
+layout_mode = 2
+
+[node name="Audio" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(195, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Audio"]
+layout_mode = 2
+text = "Audio"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Audio"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 25
+
+[node name="LabelMaster" type="Label" parent="Audio/HBoxContainer"]
+layout_mode = 2
+text = "Master"
+
+[node name="HSliderMaster" type="HSlider" parent="Audio/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Audio"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 25
+
+[node name="LabelMusic" type="Label" parent="Audio/HBoxContainer2"]
+layout_mode = 2
+text = "Music"
+
+[node name="HSliderMusic" type="HSlider" parent="Audio/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Audio"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 25
+
+[node name="LabelSFX" type="Label" parent="Audio/HBoxContainer3"]
+layout_mode = 2
+text = "SFX"
+
+[node name="HSliderSFX" type="HSlider" parent="Audio/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Audio"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Label" type="Label" parent="Audio/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Test buttons"
+
+[node name="ButtonMusic" type="Button" parent="Audio/HBoxContainer4"]
+layout_mode = 2
+toggle_mode = true
+text = "Music"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio/HBoxContainer4/ButtonMusic"]
+stream = ExtResource("1_jn5mi")
+bus = &"Music"
+
+[node name="ButtonSFX" type="Button" parent="Audio/HBoxContainer4"]
+layout_mode = 2
+text = "SFX"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio/HBoxContainer4/ButtonSFX"]
+stream = ExtResource("2_2dqow")
+bus = &"SFX"
+
+[node name="Controls" type="VBoxContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(150, 175)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Controls"]
+layout_mode = 2
+text = "Controls"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Controls"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="Controls/HBoxContainer"]
+layout_mode = 2
+text = "Up"
+
+[node name="Button" type="Button" parent="Controls/HBoxContainer"]
+layout_mode = 2
+text = "Up"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Controls"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="Controls/HBoxContainer2"]
+layout_mode = 2
+text = "Down"
+
+[node name="Button" type="Button" parent="Controls/HBoxContainer2"]
+layout_mode = 2
+text = "Down"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Controls"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="Controls/HBoxContainer3"]
+layout_mode = 2
+text = "Left"
+
+[node name="Button" type="Button" parent="Controls/HBoxContainer3"]
+layout_mode = 2
+text = "Left"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Controls"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="Controls/HBoxContainer4"]
+layout_mode = 2
+text = "Right"
+
+[node name="Button" type="Button" parent="Controls/HBoxContainer4"]
+layout_mode = 2
+text = "Right"
+
+[node name="Language" type="VBoxContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Language"]
+layout_mode = 2
+text = "Language"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Language"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="Language/HBoxContainer"]
+layout_mode = 2
+text = "Language"
+
+[node name="OptionButton" type="OptionButton" parent="Language/HBoxContainer"]
+layout_mode = 2
+
+[node name="ButtonBack" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+offset_right = 8.0
+grow_vertical = 0
+pivot_offset = Vector2(50, 50)
+text = "Back"

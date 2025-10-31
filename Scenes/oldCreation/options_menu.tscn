@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://vohm4h556ly1"]
 
-[ext_resource type="PackedScene" uid="uid://b62jnnonsr7dc" path="res://Scenes/controller.tscn" id="1_plplt"]
-[ext_resource type="PackedScene" uid="uid://bpl4uvmjeusnc" path="res://Scenes/menu_music.tscn" id="2_uj0ok"]
-[ext_resource type="PackedScene" uid="uid://7mur8le6ln2g" path="res://Scenes/language_menu.tscn" id="3_l1wg4"]
-[ext_resource type="PackedScene" uid="uid://c2l3oisyupmib" path="res://Scenes/display_menu.tscn" id="4_inh3s"]
+[ext_resource type="PackedScene" uid="uid://b62jnnonsr7dc" path="res://Scenes/oldCreation/controller.tscn" id="1_plplt"]
+[ext_resource type="PackedScene" uid="uid://bpl4uvmjeusnc" path="res://Scenes/oldCreation/menu_music.tscn" id="2_uj0ok"]
+[ext_resource type="PackedScene" uid="uid://7mur8le6ln2g" path="res://Scenes/oldCreation/language_menu.tscn" id="3_l1wg4"]
+[ext_resource type="PackedScene" uid="uid://c2l3oisyupmib" path="res://Scenes/oldCreation/display_menu.tscn" id="4_inh3s"]
 
 [node name="OptionsMenu" type="Control"]
 layout_mode = 3
