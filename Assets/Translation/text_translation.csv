@@ -1,0 +1,12 @@
+KEYS,fr,en,es,ja
+KEY_HELLO,Bonjour!,Good morning!,¡Buen día!,おはよう！
+KEY_PUSH,Appuyer sur moi,Press me,Púlsame,押してください
+KEY_TEXT,Ceci est une traduction,This is a translation,Esto es una traducción,これは翻訳です
+KEY_START,Commencer,To start,Para empezar,はじめに
+KEY_SETTINGS,Paramètres,Settings,Ajustes,設定
+KEY_QUIT,Quitter,To leave,Para irse,出発する
+KEY_VIDEO,Vidéo,Video,Video,ビデオ
+KEY_AUDIO,Audio,Audio,Audio,オーディオ
+KEY_CONTROLS,Contrôle,Control,Control,コントロール
+KEY_LANGUAGE,Langue,Language,Idioma,言語
+KEY_BACK,Retour,Back,Atrás,戻る
