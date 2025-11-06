@@ -14,6 +14,10 @@ config/name="StarterProjects"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SettingsManager="*res://Scenes/settings_manager.tscn"
+
 [display]
 
 window/stretch/mode="canvas_items"
