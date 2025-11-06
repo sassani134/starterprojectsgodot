@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://dqltstpmjwwar" path="res://Scripts/16bitDevTuts/controls.gd" id="5_71uer"]
 [ext_resource type="Script" uid="uid://cddfkrq6gdc2" path="res://Scripts/16bitDevTuts/language.gd" id="6_upiry"]
 
-[node name="MainMenu" type="Control" node_paths=PackedStringArray("menu", "main_settings", "video_settings", "audio_settings", "controls_settings", "language_settings", "back_button", "start_button", "settings_button", "quit_button", "video_button", "audio_button", "controls_button", "language_button")]
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("menu", "main_settings", "video_settings", "audio_settings", "controls_settings", "language_settings", "start_button", "settings_button", "quit_button", "video_button", "audio_button", "controls_button", "language_button", "back_button", "reset_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +22,6 @@ video_settings = NodePath("Video")
 audio_settings = NodePath("Audio")
 controls_settings = NodePath("Controls")
 language_settings = NodePath("Language")
-back_button = NodePath("ButtonBack")
 start_button = NodePath("Menu/Control/ButtonStart")
 settings_button = NodePath("Menu/Control2/ButtonSettings")
 quit_button = NodePath("Menu/Control3/ButtonQuit")
@@ -30,6 +29,8 @@ video_button = NodePath("Settings/Control/ButtonVideo")
 audio_button = NodePath("Settings/Control2/ButtonAudio")
 controls_button = NodePath("Settings/Control3/ButtonControls")
 language_button = NodePath("Settings/Control4/ButtonLanguage")
+back_button = NodePath("ButtonBack")
+reset_button = NodePath("ButtonReset")
 
 [node name="Menu" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(100, 100)
@@ -478,8 +479,33 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -8.0
-offset_right = 8.0
+offset_top = -100.0
+offset_right = 100.0
 grow_vertical = 0
 pivot_offset = Vector2(50, 50)
 text = "KEY_BACK"
+
+[node name="ButtonReset" type="Button" parent="."]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_top = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "KEY_RESET"
+
+[node name="Buttons" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0

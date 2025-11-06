@@ -23,8 +23,9 @@ func _ready() -> void:
 	fullscreen_check.toggled.connect(_on_fullscreen_toggled)
 	borderless_check.toggled.connect(_on_borderless_toggled)
 	vsync_check.toggled.connect(_on_vsync_toggled)
+	return
 
-func load_current_settings():
+func load_current_settings() -> void:
 	var mode := DisplayServer.window_get_mode()
 	fullscreen_check.button_pressed = mode == DisplayServer.WINDOW_MODE_FULLSCREEN
 	borderless_check.button_pressed = DisplayServer.window_get_flag(DisplayServer.WINDOW_FLAG_BORDERLESS)
@@ -37,27 +38,31 @@ func load_current_settings():
 		if parts.size() == 2 and int(parts[0]) == window_size.x and int(parts[1]) == window_size.y :
 			resolution_option.select(i)
 			break
-	pass
+	return
 
-func _on_resolution_selected(index: int):
+func _on_resolution_selected(index: int) -> void:
 	var text : String = resolution_option.get_item_text(index)
 	var parts = text.split("x")
 	if parts.size() == 2:
 		DisplayServer.window_set_size(Vector2i(int(parts[0]),int(parts[1])))
-	pass
+	SettingsManager.video_settings["resolution"] = Vector2i(int(parts[0]), int(parts[1]))
+	return
 
-func _on_fullscreen_toggled(enabled: bool):
+func _on_fullscreen_toggled(enabled: bool) -> void:
 	if enabled:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-	pass
+	SettingsManager.video_settings["fullscreen"] = enabled
+	return
 
-func _on_borderless_toggled(enabled: bool):
+func _on_borderless_toggled(enabled: bool) -> void:
 	DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, enabled)
-	pass
+	SettingsManager.video_settings["borderless"] = enabled
+	return
 
-func _on_vsync_toggled(enabled: bool):
+func _on_vsync_toggled(enabled: bool) -> void:
 	var mode = DisplayServer.VSYNC_ENABLED if enabled else DisplayServer.VSYNC_DISABLED
 	DisplayServer.window_set_vsync_mode(mode)
-	pass
+	SettingsManager.video_settings["vsync"] = enabled
+	return
